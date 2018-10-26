@@ -53,7 +53,7 @@ app.get("/", function(request, response){
 app.post('/uploads', upload.single('myFile'), function (request, response, next) {
     console.log("Uploaded: " + request.file.filename);
     uploadedFiles.push(request.file.filename);
-    response.end(`<a href="/">Go Back</a> <img src="uploads/${request.file.filename}"/`);
+    response.end(`<a href="/">Go Back</a> <img src="uploads/${request.file.filename}"/>`);
 // response.end(`${<fieldset><form action="/"><input type="submit" value="Go Back"/></form></fieldset>}`);
 })
 
